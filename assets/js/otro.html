@@ -39,15 +39,7 @@
     <div class="container">
         <div class="row text-center" id="loader">
             <div class="col-md-12">
-                <div class="lds-spinner" style="margin-top: 100px;">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                <div class="lds-ring" style="margin-top: 100px;">
                     <div></div>
                     <div></div>
                     <div></div>
@@ -57,26 +49,33 @@
             </div>
         </div>
         <div class="row d-none" id="mainRow">
+
             <div class="col-sm-12">
                 <canvas id="myChart" width="400" height="250"></canvas>
             </div>
+            <div class="col-sm-12 mt-5">
+                <h1>Animales zoo</h1>
+                <table class="table table-bordered table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>#</th>
+                            <th>Nombre</th>
+                            <th>Monto</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tblUsuarios">
+
+
+                    </tbody>
+                </table>
+
+
+            </div>
         </div>
-        <div class="col-md-6 mt-5">
-            <h1>Reporte de Animales - Zoo</h1>
-            <table class="table table-bordered table-striped">
-                <thead class="thead-dark text-center">
-                    <tr>
-                        <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Cantidad</th>
-                    </tr>
-                </thead>
-                <tbody id="tblAnimales">
-                </tbody>
-            </table>
-        </div>
+
     </div>
     <!-- CONTENIDO DE TU PAGINA -->
+
     <footer class="p-5">
         <div class="row">
             <div class="col-6 col-md">
@@ -116,5 +115,4 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
 <script src="assets/js/main.js"></script>
-
 </html>
