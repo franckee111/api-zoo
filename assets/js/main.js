@@ -7,7 +7,7 @@ const tblAnimales = document.getElementById('tblAnimales');
 const animales = "Main/endpoint_animales_zoo";
 const url = `http://ucamp.alumnos.dev4humans.com.mx/${animales}`;
 const grafica  = document.getElementById('myChart').getContext('2d');
-const loadContainer = document.getElementById("loaderContainer");
+const loaderContainer = document.getElementById("loaderContainer");
 const rowContainer = document.getElementById("rowContainer");
 
 // fetch(url_api)
@@ -17,29 +17,29 @@ const rowContainer = document.getElementById("rowContainer");
 //     .then((data) => console.log(data))
 //     .catch((error) => console.log(error))
 
-const labels = Utils.months({count: 7});
-const myChart = new Chart(grafica, {
-    type: 'line',
-    data: {
-        labels: labels,
-        datasets: [
-            {
-                label: 'Cantidad de animales',
-                data: [65, 59, 80, 81, 56, 55, 40],
-                fill: true,
-                borderColor: 'rgb(124, 198, 238)',
-                tension: 0.1
-            }
-        ]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
+// const labels = Utils.months({count: 7});
+// const myChart = new Chart(grafica, {
+//     type: 'line',
+//     data: {
+//         labels: labels,
+//         datasets: [
+//             {
+//                 label: 'Cantidad de animales',
+//                 data: [65, 59, 80, 81, 56, 55, 40],
+//                 fill: true,
+//                 borderColor: 'rgb(124, 198, 238)',
+//                 tension: 0.1
+//             }
+//         ]
+//     },
+//     options: {
+//         scales: {
+//             y: {
+//                 beginAtZero: true
+//             }
+//         }
+//     }
+// });
 
 function cargarAnimal(base_url_api) {
     fetch(url, { method: "GET" })
@@ -61,7 +61,7 @@ function cargarAnimal(base_url_api) {
                             label: 'Cantidad de animales',
                             data: data_for_chart,
                             fill: true,
-                            backgroundColor: '#ccd9ff',
+                            backgroundColor: '#06C3FE82',
                             borderColor: 'rgb(124, 198, 238)',
                             tension: 0.1
                         }
